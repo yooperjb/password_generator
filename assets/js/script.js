@@ -1,7 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -16,7 +15,6 @@ function generatePassword() {
   pw = '';
   // Prompt user for password length
   var passLength = window.prompt("What length password would you like to generate (Choose 8-128).");
- 
   // check if password is 8-128 characters
   while (!(passLength >= 8 && passLength <= 128)) {
     var passLength = window.prompt("Please choose a number from 8-128");
@@ -28,9 +26,9 @@ function generatePassword() {
   // create random chars for the length of the password chosen
   for (i = 0; i < passLength; i++) {
     
-    // get a random char type for those selected
+    // ramdomly select one of the character types chosen, from the array
     charType = trueKeysArr[Math.floor(Math.random()* trueKeysArr.length)];
-    // add random char to pw array calling generateChar
+    // add random char to pw string by calling generateChar
     pw = pw + (generateChar(charType));
     
   }
@@ -82,23 +80,19 @@ function generateChar(char) {
 
     case 'lCase': // generate random lower case character
       tempChar = String.fromCharCode(Math.floor((Math.random() * 26)+ 97));
-      console.log("Random lower case is: " + tempChar);
       return tempChar;
 
     case 'uCase': // generate random upper case character
       tempChar = String.fromCharCode(Math.floor((Math.random() * 26)+ 65));
-      console.log("Random upper case is: " + tempChar);
       return tempChar;
 
     case 'numCase': // generate random number
       tempChar = String.fromCharCode(Math.floor((Math.random() * 10)+ 48));
-      console.log("Random Number is: " + tempChar);
       return tempChar;
     
     case 'specCase': // generate random spec character
       tempChar = String.fromCharCode(Math.floor((Math.random() * 15)+ 33));
-      console.log("Random Special Char is: " + tempChar);
-      return tempChar; 
+      return tempChar;
   }
 };
 

@@ -3,7 +3,7 @@
 
 ## Description
 
-This is an online password generator which creates a password based on user input options. The user can select a password length, ranging from 8 to 128 characters, and can choose to include any of the four types of characters. These include:
+This is an online password generator which creates a password based on user input options. The user can select a password length, ranging from 8 to 128 characters, and can choose to include any of the four types of characters:
 
 * lower case
 * upper case
