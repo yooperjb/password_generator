@@ -26,8 +26,8 @@ function generatePassword() {
   // create random chars for the length of the password chosen
   for (i = 0; i < passLength; i++) {
     
-    // ramdomly select one of the character types chosen, from the array
-    charType = trueKeysArr[Math.floor(Math.random()* trueKeysArr.length)];
+    // randomly select one of the character types chosen, from the array
+    charType = trueKeysArr[Math.floor(Math.random() * trueKeysArr.length)];
     // add random char to pw string by calling generateChar
     pw = pw + (generateChar(charType));
     
@@ -36,7 +36,7 @@ function generatePassword() {
 
 };
 
-// user selected password charcter options. Returns array of true choices.
+// user selected password character options. Returns array of true choices.
 function passOptions() {
   var options = {
     lCase: false,
